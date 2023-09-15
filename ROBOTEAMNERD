@@ -1,0 +1,32 @@
+       public void run() {
+        // Configura o robô antes de começar
+        turnGunRight(360); // Gire o canhão em um círculo completo
+        ahead(100); // Mova-se para frente 100 pixels
+
+        while (true) {
+            // Loop principal do robô
+            ahead(100); // Mova-se para frente 100 pixels
+            turnGunRight(360); // Gire o canhão em um círculo completo
+            back(100); // Volte 100 pixels
+            turnGunRight(360); // Gire o canhão em um círculo completo
+        }
+    }
+
+    public void onScannedRobot(ScannedRobotEvent event) {
+        // Quando um robô inimigo é detectado
+        fire(1); // Atire com potência 1 (ajuste conforme necessário)
+    }
+
+    public void onHitByBullet(HitByBulletEvent event) {
+        // Quando o robô é atingido por uma bala
+        turnLeft(90); // Gire 90 graus para a esquerda
+        ahead(50); // Mova-se para frente 50 pixels
+    }
+
+    public void onHitWall(HitWallEvent event) {
+        // Quando o robô colide com uma parede
+        back(50); // Volte 50 pixels
+        turnLeft(90); // Gire 90 graus para a esquerda
+    }
+}
+```

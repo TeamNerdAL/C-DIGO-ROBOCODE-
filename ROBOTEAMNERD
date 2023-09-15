@@ -1,4 +1,13 @@
-       public void run() {
+# Team nerd
+
+
+package meuPacote;
+
+import robocode.*;
+
+public class MeuRobo extends Robot {
+
+    public void run() {
         // Configura o robô antes de começar
         turnGunRight(360); // Gire o canhão em um círculo completo
         ahead(100); // Mova-se para frente 100 pixels
@@ -29,4 +38,3 @@
         turnLeft(90); // Gire 90 graus para a esquerda
     }
 }
-```

@@ -37,8 +37,8 @@ public class MeuRobo extends AdvancedRobot {
 			// Tell the game that when we take move,
 			// we'll also want to turn right... a lot.
 			setTurnRight(10000);
-			// Limit our speed to 5
-			setMaxVelocity(5);
+			// Limit our speed to 10
+			setMaxVelocity(10);
 			// Start moving (and turning)
 			ahead(10000);
 			// Repeat.
@@ -49,7 +49,7 @@ public class MeuRobo extends AdvancedRobot {
 	 * onScannedRobot: Fire hard!
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
-		fire(10);
+		fire(1);
 	}
 
 	/**
